@@ -5,7 +5,7 @@ dependencies. Every node attribute name is prefixed by using a '@'.
 Example:
 
 ```
-"{{ '<test>this is a test</test>' | xml_to_jdon }}"
+"{{ '<test>this is a test</test>' | xml_to_json }}"
 ```
 
 ## How to use
@@ -18,11 +18,11 @@ content:
 filter_plugins = ./filter_plugins
 ```
 
-## Run
+## Run Exmaple
 
 `playbook.yml` defines a simple use case that uses a nmap XML output o test the
-plugin. Due the type of network scan you should use the following command to
-execute the playbook.
+plugin. You need to have nmap installed in your system and also make sure you
+run the example playbook as root.
 
 ```
 $ ansible-playbook playbook.yaml --ask-become-pass --become
