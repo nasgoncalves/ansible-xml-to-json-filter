@@ -18,7 +18,7 @@ content:
 filter_plugins = ./filter_plugins
 ```
 
-## Run Exmaple
+## Run Example
 
 `playbook.yml` defines a simple use case that uses a nmap XML output o test the
 plugin. You need to have nmap installed in your system and also make sure you
