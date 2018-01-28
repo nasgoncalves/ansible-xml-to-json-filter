@@ -1,0 +1,16 @@
+---
+
+- hosts: localhost
+  tasks:
+    - name: Nmap scan
+      shell: nmap -oX - -A -O 127.0.0.1
+      register: nmap_scan
+
+    - set_fact:
+        nmap_scan_json: "{{ nmap_scan.stdout | xml_to_json }}"
+
+    - debug:
+        msg: "{{ item['ports']['port'] }}"
+      with_items:
+        - "{{ nmap_scan_json['nmaprun']['host'] }}"
+...
