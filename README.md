@@ -10,8 +10,9 @@ Example:
 ```
 
 | Filter | Description |
-| *from_xml* | Convert XML to python dictionary |
-| *xml_to_json | Convert XML to JSON | 
+|--------|-------------|
+| **from_xml** | Convert XML to python dictionary |
+| **xml_to_json** | Convert XML to JSON | 
 
 ## How to use
 
