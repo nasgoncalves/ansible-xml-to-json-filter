@@ -25,9 +25,9 @@ filter_plugins = ./filter_plugins
 
 ## Run the example
 
-`playbook.yml` defines a simple use case that uses a nmap XML output o test the
-plugin. You need to have nmap installed in your system and also make sure you
-run the example playbook as root.
+`playbook.yml` is a simple use case that uses a *nmap* XML output o test the
+plugin. To run this playbook you need nmap installed in your system and also 
+make sure you run the example playbook as root.
 
 ```
 $ ansible-playbook playbook.yaml --ask-become-pass --become
