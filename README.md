@@ -5,8 +5,13 @@ dependencies. Every node attribute name is prefixed by using a '@'.
 Example:
 
 ```
+"{{ '<test>this is a test</test>' | from_xml }}"
 "{{ '<test>this is a test</test>' | xml_to_json }}"
 ```
+
+| Filter | Description |
+| *from_xml* | Convert XML to python dictionary |
+| *xml_to_json | Convert XML to JSON | 
 
 ## How to use
 

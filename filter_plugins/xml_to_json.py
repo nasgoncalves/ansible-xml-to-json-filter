@@ -4,6 +4,7 @@ import json
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 
+
 class FilterModule(object):
 
     def etree_to_dict(self, t):
@@ -30,10 +31,14 @@ class FilterModule(object):
 
     def filters(self):
         return {
+            'from_xml': self.from_xml,
             'xml_to_json': self.xml_to_json
         }
 
-    def xml_to_json(self, data):
+    def from_xml(self, data):
         root = ET.ElementTree(ET.fromstring(data)).getroot()
-        return json.dumps(self.etree_to_dict(root))
+        return self.etree_to_dict(root)
+
+    def xml_to_json(self, data):
+        return json.dumps(self.from_xml(data))
 
